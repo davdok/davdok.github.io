@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Startup Ideas Generator</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="assets/ico/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="assets/ico/favicon.png" type="image/png">
+        <link rel="icon" sizes="32x32" href="assets/ico/favicon-32.png" type="image/png">
+        <link rel="icon" sizes="64x64" href="assets/ico/favicon-64.png" type="image/png">
+        <link rel="icon" sizes="96x96" href="assets/ico/favicon-96.png" type="image/png">
+
+    </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                  <!--Main -->
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1>Ultimate Hollywood startup ideas generator</h1>
+
+                            <div class="description">
+                              <!-- ADD Changing links !-->
+                              <h2 id="display-area"> Using
+
+                                <a id="techies" href="https://www.google.com/search?q=3D+Printing+techniques">
+                                  <strong>3D Printing techniques,</strong>
+                                </a>
+                                we develop the new
+                                <a href="https://www.google.com/search?q=Airbnb">
+                                  <strong>AIRBNB </strong>
+                                </a>
+                                for
+                                <a href="http://google.com/search?q=Drug+Cartels">
+                                  <strong>Drug Cartel</strong>
+                                </a>
+
+                              </h2>
+
+                              <p>
+                                <a class="btn btn-lg btn-danger" role="button" id='generate-button'>Generate another idea</a>
+                              </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Sharing Part -->
+
+                    <!-- Twitter Share WIP !-->
+
+                    <div class="twitter">
+                      <iframe id="twitter-widget-1" scrolling="no" frameborder="0"
+                      allowtransparency="true"
+                      class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+                      title="Twitter Tweet Button"
+                      src="http://platform.twitter.com/widgets/tweet_button.64a917b4a230f163048902c783e1530f.en.html#dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fadd.domain.name%2Fdavdok%2F%23&amp;size=m&amp;text=Check+out+this+cool+website&amp;time=1459608019810&amp;type=share&amp;url=http%3A%2F%2Fadd.domain.name%2Fdavdok%2F%23"
+                      style="position: static; visibility: visible; width: 61px; height: 20px;">
+                    </iframe>
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js">
+                    </script>
+                  </div>
+
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 social-login">
+                        	<h3>Share your fantastic idea with:</h3>
+                        	<div class="social-login-buttons">
+	                        	<a class="btn btn-link-1 btn-link-1-facebook" href="#">
+	                        		<i class="fa fa-facebook"></i> Facebook
+	                        	</a>
+	                        	<a class="btn btn-link-1 btn-link-1-twitter" href="#">
+	                        		<i class="fa fa-twitter">
+                              </i> Twitter
+	                        	</a>
+                        	</div>
+                          <footer class="footer">
+                                  <p>&copy; 2016 - David Dokes</p>
+                          </footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+
+        <!-- Idea Generator Script-->
+        <script>
+     var button = document.getElementById("generate-button");
+     var showThisMessage = function (message) {
+        var displayArea = document.getElementById("display-area");
+        displayArea.innerHTML = message;
+      };
+
+      var makeAndShowConcept = function () {
+        var randomConcept = getRandomConcept();
+        showThisMessage(randomConcept);
+      };
+
+      var pickRandom = function (list) {
+        return list[Math.floor(Math.random()*list.length)];
+      };
+
+      button.addEventListener('click', makeAndShowConcept);
+
+      var getRandomConcept = function () {
+
+        var audience = ["real estate","insurance","organic food","drug cartels",
+            "schools","used toys",
+            "niche brands","social marketers","outdoor enthusiasts","pilots",
+            "antique collectors","billionaires","the government",
+            "sports teams","young athletes","baristas","your finances","an army",
+            "animal rights activists","wiskey lovers","social gatherings",
+            "tennis players","wine lovers","single mothers","widows","ex-boyfriends","ex-girlfriends",
+            "political lobby groups","travellers","CEOs",
+            "actors","skaters","dancers","computer programmers","alcohol",
+            "museums","book shops","coffee shops","old people","comic book collectors","transexuals","gardeners",
+            "adopting couples","comedians","pornstars","photography blogs","large families",
+            "engineers","inventors","computer scientists","household pets","biologists","biochemists","ecologists",
+            "astronauts","neuroscientists","chemists","physicists","geographers","geologists","statisticians",
+            "comic book creators","authors","fashion designers","movie directors","game artists",
+            "artists","ballet dancers","break dancers","choreographers","taxi drivers",
+            "exotic dancers","carpenters","electricians","plumbers","janitors","authors",
+            "bloggers","freelancers","poets","screenwriters","writers","cardiologists",
+            "flight attendants","physicians","doctors","psychologists","mechanics",
+            "teachers","surgeons","nurses","lawyers","architects","dentists","accountants","social workers",
+            "scientists","economists","Christians","Muslims","Hindus","Buddhists","atheists",
+            "Jewish people","homeless people","rich people","poor people","farmers","intelligent people",
+            "hippies","gay people","happy people","tweens","middle age people","snobby people",
+            "entrepreneurs","students","parents","grandparents",
+            "Apple fanboys and fangirls",
+            "Microsoft fanboys and fangirls","graphic designers",
+            "viral infections","soldiers","bodybuilders","runners",
+            "cyclers","antique car owners","home owners","tea drinkers","avid coffee drinkers","travellers",
+            "startups","Bitcoin users",
+            "landscape photographers",
+            "personal trainers","siblings","house parties",
+            "heavy drug users","alcoholics",
+            "government employees"];
+
+        var unic=["tumblr","Twitter",  "Facebook",  "Google Docs",  "Dropbox",  "Reddit",  "Amazon"  ,  "Airbnb","Pinterest",  "Github",  "PayPal",
+            "Kickstarter",  "Netflix",  "Google",  "Uber",  "Ebay",  "Spotify",  "Instagram",  "Meetup",  "Snapchat",'Uber', 'Xiaomi', 'Airbnb', 'Palantir Technologies',
+              'Snapchat', 'WeWork', 'Flipkart','SpaceX', 'Pinterest', 'Dropbox',
+              'Spotify', 'Lyft', 'Stripe', 'Magic Leap', 'Zenefits', 'Cloudera',
+              'Slack Technologies', 'Delivery Hero','DocuSign', 'Hellofresh',
+              'SurveyMonkey', 'Evernote', 'Github', 'Instacart','MongoDB', 'BlaBlaCar', 'Skyscanner',
+              'Buzzfeed','Lazada','Twilio', 'Docker', 'Africa Internet Group', 'TransferWise', 'Shazam',
+              'Eventbrite'];
+
+        var Tech= ['In vitro meat', 'Precision agriculture', 'Vertical farming', 'Drones', 'Micro air vehicle',
+              'Atmospheric carbon dioxide removal', '3D printing and Bio-printing', 'Claytronics',
+              'Molecular assembler', 'Utility fog', 'Arcology', 'Domed city', 'Aerogel', 'Amorphous metal',
+              'Bioplastic', 'Conductive Polymers', 'Femtotechnology', 'Fullerene', 'Graphene', 'Lab-on-a-chip',
+              'High-temperature superconductivity', 'Magnetorheological fluid', 'High-temperature superfluidity',
+              'LiTraCon', 'Metamaterials', 'Metal foam', 'Nanomaterials: carbon nanotubes', 'Programmable matter',
+              'Quantum dots', 'Silicene', 'Superalloy', 'Synthetic diamond', 'hypereutectic alloy', 'super-plastic alloy',
+              'Conductive polymers', '3D displays', 'Ferro Liquid Display', 'Field emission display',
+              'Holographic display', 'Interferometric modulator display',
+              'Laser video displays', 'OLED displays', 'Organic light-emitting transistor', 'Phased-array optics',
+              'Screenless display (Virtual retinal display)', 'Telescopic pixel display', 'Time-multiplexed optical shutter',
+              'Volumetric display', 'Bead washing machine', 'Magnetic refrigeration', 'Qarnot', 'V-tex', 'Biometrics',
+              'Digital scent technology', 'Electronic nose', 'E-textiles', 'Flexible electronics', 'Memristor',
+              'Molecular electronics', 'Nanoelectromechanical systems', 'Spintronics', 'Thermal copper pillar bump',
+              'Three-dimensional integrated circuit', 'Airborne wind turbine', 'Artificial photosynthesis',
+              'Biofuels', 'Concentrated solar power', 'Electric double-layer capacitor', 'Energy harvesting',
+              'Flywheel energy storage', 'Fusion power', 'Generation IV reactor', 'Grid energy storage',
+              'Home fuel cell', 'Hydrogen economy', 'Lithium-air battery', 'Lithium-ion batteries',
+              'Lithium iron phosphate battery', 'Lithium-sulfur battery', 'Molten salt battery',
+              'Molten salt reactor', 'Nanowire battery', 'Nantenna', 'Ocean thermal energy conversion',
+              'Silicon air battery', 'Smart grid', 'Solar roadway', 'Space-based solar power',
+              'Thorium fuel cycle', 'Vortex engine', 'Wireless energy transfer', 'Zero-energy building',
+              'Computer-generated imagery', 'Immersive virtual reality', '4G cellular communication',
+              '5G cellular communications', 'Ambient intelligence', 'Artificial brain', 'Artificial intelligence',
+              'Atomtronics', 'Augmented reality', 'Carbon nanotube field-effect transistor', 'Civic technology',
+              'Counterparty (technology)', 'Cryptocurrency', 'Cybermethodology', 'Exascale computing',
+              'Internet of Things', 'Emerging memory technologies T-RAM', 'Emerging magnetic data storage technologies SMR',
+              'Fourth-generation optical discs (3D optical data storage)',
+              'General-purpose computing on graphics processing units', 'Exocortex', 'Li-Fi',
+              'Machine translation', 'Machine vision', 'Mobile collaboration and e-learning', 'Optical computing',
+              'Quantum computing', 'Quantum cryptography', 'Radio-frequency identification',
+              'Semantic Web or answer machine', 'Software-defined radio', 'Speech recognition', 'Subvocal recognition',
+              'Three-dimensional integrated circuit', 'Ubiquitous computing', 'Virtual Reality', 'Wearable computer',
+              'Artificial uterus', 'Body implants', 'Cryonics', 'De-extinction',
+              'Genetic engineering of organisms and viruses', 'Hibernation or suspended animation', 'Life extension',
+              'Nanomedicines', 'Nanosensors', 'Oncolytic Virus', 'Personalized medicine', 'Plantibody',
+              'Regenerative medicine', 'Robotic surgery', 'Stem cell treatments', 'Synthetic biology', 'Tissue engineering',
+              'Tricorder', 'Virotherapy', 'Vitrification or cryoprotectant', 'Brain-computer interface',
+              'Brain-reading', 'Electroencephalography', 'Head transplant', 'Mind uploading', 'Neuroprosthetics',
+              'Nootropics', 'Antimatter weapon', 'Caseless ammunition', 'Cloak of invisibility', 'Directed energy weapon',
+              'Electrolaser', 'Electromagnetic weapons', 'Electrothermal-chemical technology', 'Force field',
+              'Green bullet', 'Laser weapon', 'Particle beam weapon', 'Plasma weapon', 'Pure fusion weapon',
+              'Sonic weapon', 'Stealth technology', 'Vortex ring gun', 'Wireless long-range electric shock weapon',
+              'Anti-gravity', 'Artificial gravity', 'Asteroid mining', 'Domed city', 'Galileo', 'Hypertelescope',
+              'Solar gravitational lens', 'Inflatable habitat', 'Miniaturized satellite',
+              'Android', 'Molecular nanotechnology', 'Powered exoskeleton', 'Self-reconfiguring modular robot',
+              'Swarm robotics', 'Unmanned vehicle', 'Aeroscraft', 'Airless tire', 'Alternative fuel vehicle',
+              'Autonomous car', 'Beam-powered propulsion', 'Electro hydrodynamic propulsion', 'Electric car',
+              'Flexible wings (X-53 Active Aeroelastic Wing)', 'Flying car', 'Fusion rocket', 'Hovertrain',
+              'High Altitude Platforms', 'Ion thruster', 'Jet pack or backpack helicopter', 'Maglev train',
+              'Magnetic levitation', 'Mass driver', 'Float to Orbit', 'Personal rapid transit', 'Physical Internet',
+              'Vactrain', 'Nuclear pulse propulsion', 'Propellant depot', 'Pulse detonation engine',
+              'Reusable launch system', 'Scramjet', 'Solar sail', 'Space elevator', 'Spaceplane',
+              'Supersonic transport', 'Vehicular communication systems'];
+
+        var myConcept = "Using " + pickRandom(Tech) + " techniques, we develop the new " + pickRandom(unic) + " for " + pickRandom(audience);
+
+        return myConcept;
+        };
+        
+    </script>
+
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
