@@ -120,19 +120,21 @@
 
         var modifyLink= function(rTech,rAudience,rUnic) {
 
-        var searchUrl="https://www.google.com/search?q=";
+        var unicUrl="https://";
+        var audienceUrl="https://www.google.com/search?q=";
+        var asImage="&tbm=isch"
         var techUrl="https://en.wikipedia.org/wiki/";
 
         var techArea = document.getElementById("tech");
-        techArea.href = searchUrl+rTech;
+        techArea.href = techUrl+rTech;
         techArea.innerHTML=rTech;
 
         var audienceArea= document.getElementById("audience")
-        techArea.href = searchUrl+rAudience;
-        audienceArea.innerHTML=rAudience
+        audienceArea.href = audienceUrl+rAudience+asImage;
+        audienceArea.innerHTML=rAudience;
 
         var unicArea = document.getElementById("unic");
-        unicArea.href = unicUrl+rUnic;
+        unicArea.href = unicUrl+rUnic+".com";
         unicArea.innerHTML=rUnic;
     };
 
