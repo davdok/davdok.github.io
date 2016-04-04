@@ -120,14 +120,15 @@
 
         var modifyLink= function(rTech,rAudience,rUnic) {
 
-        var unicUrl="https://www.google.com/search?q=";
+        var searchUrl="https://www.google.com/search?q=";
         var techUrl="https://en.wikipedia.org/wiki/";
 
         var techArea = document.getElementById("tech");
-        techArea.href = techUrl+rTech;
+        techArea.href = searchUrl+rTech;
         techArea.innerHTML=rTech;
 
         var audienceArea= document.getElementById("audience")
+        techArea.href = searchUrl+rAudience;
         audienceArea.innerHTML=rAudience
 
         var unicArea = document.getElementById("unic");
