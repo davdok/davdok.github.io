@@ -8,7 +8,6 @@ jQuery(document).ready(function() {
 
     $.backstretch([
         "assets/img/backgrounds/beach.jpg"
-      , "assets/img/backgrounds/beach2.jpg"
       , "assets/img/backgrounds/desk.jpg"
       ,"assets/img/backgrounds/mac.jpg"
       ,"assets/img/backgrounds/miami.jpg"
