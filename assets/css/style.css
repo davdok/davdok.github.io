@@ -18,6 +18,10 @@ a, a:hover, a:focus {
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
 }
 
+#tech, #audience, #unic {
+  font-weight: 500;
+}
+
 h1, h2 {
 	margin-top: -10px;
 	font-size: 38px;
@@ -35,6 +39,8 @@ h3 {
 }
 
 img { max-width: 100%; }
+
+
 
 ::-moz-selection { background: lightcoral; color: #fff; text-shadow: none; }
 ::selection { background: lightcoral; color: #fff; text-shadow: none; }

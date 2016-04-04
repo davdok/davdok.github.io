@@ -29,7 +29,7 @@
 
     </head>
 
-    <body>
+    <body onload="makeAndShowConcept()">
 
         <!-- Top content -->
         <div class="top-content">
@@ -44,15 +44,15 @@
                               <!-- ADD Changing links !-->
                               <h2 id="display-area"> Using
 
-                                <a id="techies" href="https://www.google.com/search?q=3D+Printing+techniques">
+                                <a id="tech" href="https://www.google.com/search?q=3D+Printing+techniques">
                                   <strong>3D Printing techniques,</strong>
                                 </a>
                                 we develop the new
-                                <a href="https://www.google.com/search?q=Airbnb">
+                                <a id="unic" href="https://www.google.com/search?q=Airbnb">
                                   <strong>AIRBNB </strong>
                                 </a>
                                 for
-                                <a href="http://google.com/search?q=Drug+Cartels">
+                                <a id="audience" href="http://google.com/search?q=Drug+Cartels">
                                   <strong>Drug Cartel</strong>
                                 </a>
 
@@ -111,25 +111,32 @@
 
         <!-- Idea Generator Script-->
         <script>
-     var button = document.getElementById("generate-button");
-     var showThisMessage = function (message) {
-        var displayArea = document.getElementById("display-area");
-        displayArea.innerHTML = message;
-      };
 
-      var makeAndShowConcept = function () {
-        var randomConcept = getRandomConcept();
-        showThisMessage(randomConcept);
-      };
+        var button = document.getElementById("generate-button");
 
-      var pickRandom = function (list) {
+        var pickRandom = function (list) {
         return list[Math.floor(Math.random()*list.length)];
       };
 
-      button.addEventListener('click', makeAndShowConcept);
+        var modifyLink= function(rTech,rAudience,rUnic) {
 
-      var getRandomConcept = function () {
+        var unicUrl="https://www.google.com/search?q=";
+        var techUrl="https://en.wikipedia.org/wiki/";
 
+        var techArea = document.getElementById("tech");
+        techArea.href = techUrl+rTech;
+        techArea.innerHTML=rTech;
+
+        var audienceArea= document.getElementById("audience")
+        audienceArea.innerHTML=rAudience
+
+        var unicArea = document.getElementById("unic");
+        unicArea.href = unicUrl+rUnic;
+        unicArea.innerHTML=rUnic;
+    };
+
+    var makeAndShowConcept = function ()
+      {
         var audience = ["real estate","insurance","organic food","drug cartels",
             "schools","used toys",
             "niche brands","social marketers","outdoor enthusiasts","pilots",
@@ -227,11 +234,20 @@
               'Reusable launch system', 'Scramjet', 'Solar sail', 'Space elevator', 'Spaceplane',
               'Supersonic transport', 'Vehicular communication systems'];
 
-        var myConcept = "Using " + pickRandom(Tech) + " techniques, we develop the new " + pickRandom(unic) + " for " + pickRandom(audience);
+        var randomTech= pickRandom(Tech);
+        var randomAudience= pickRandom(audience);
+        var randomUnic= pickRandom(unic);
 
-        return myConcept;
-        };
-        
+        var randomConcept = "Using " + randomTech + " techniques, we develop the new " + randomAudience + " for " + randomUnic;
+
+        modifyLink(randomTech,randomAudience,randomUnic);
+
+      };
+
+
+
+      button.addEventListener('click', makeAndShowConcept);
+
     </script>
 
         <!--[if lt IE 10]>
